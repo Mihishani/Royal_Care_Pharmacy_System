@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane2" prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: lightCyan;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.royal_care_pharmacy.Controller.DashBoardSMFormController">
+   <children>
+      <AnchorPane prefHeight="91.0" prefWidth="331.0" style="-fx-background-color: #83D6DE;">
+         <children>
+            <Text layoutX="98.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Menu">
+               <font>
+                  <Font name="Garamond Bold" size="44.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="63.0" fitWidth="60.0" layoutX="21.0" layoutY="13.0">
+               <image>
+                  <Image url="@../asset/more.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane1" layoutY="91.0" prefHeight="910.0" prefWidth="331.0" style="-fx-background-color: CadetBlue;">
+         <children>
+            <Button fx:id="btnItem" layoutY="14.0" mnemonicParsing="false" onAction="#btnItemOnAction" prefHeight="69.0" prefWidth="331.0" style="-fx-background-color: CadetBlue;" text="Item ">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.05" light="$null" specularConstant="0.0" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="btnBatch" layoutY="104.0" mnemonicParsing="false" onAction="#btnBatchOnAction" prefHeight="69.0" prefWidth="331.0" style="-fx-background-color: CadetBlue;" text=" Batch">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.05" light="$null" specularConstant="0.0" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="btnSupplier" layoutY="198.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" prefHeight="69.0" prefWidth="331.0" style="-fx-background-color: CadetBlue;" text=" Supplier">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.05" light="$null" specularConstant="0.0" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <ImageView fitHeight="37.0" fitWidth="49.0" layoutX="31.0" layoutY="30.0">
+               <image>
+                  <Image url="@../asset/Item.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="49.0" layoutX="35.0" layoutY="117.0">
+               <image>
+                  <Image url="@../asset/Batch.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="31.0" layoutY="208.0">
+               <image>
+                  <Image url="@../asset/Supplier.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnBack" layoutX="93.0" layoutY="304.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="51.0" prefWidth="145.0" style="-fx-background-color: DarkCyan;" text=" Logout" textFill="#0d0c0c">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane fx:id="pane3" layoutX="331.0" prefHeight="1001.0" prefWidth="1590.0" style="-fx-background-color: LightCyan;">
+         <children>
+            <AnchorPane depthTest="ENABLE" prefHeight="91.0" prefWidth="1590.0" style="-fx-background-color: #64DDBB;">
+               <children>
+                  <Text layoutX="1302.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Royal care ">
+                     <font>
+                        <Font name="System Bold Italic" size="28.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1353.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmacy">
+                     <font>
+                        <Font name="System Bold Italic" size="28.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="63.0" fitWidth="70.0" layoutX="1492.0" layoutY="14.0">
+                     <image>
+                        <Image url="@../asset/heartbeat.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

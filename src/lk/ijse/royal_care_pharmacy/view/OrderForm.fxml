@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="1000.0" prefWidth="1599.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.royal_care_pharmacy.Controller.OrderFormController">
+   <children>
+      <ImageView fitHeight="1000.0" fitWidth="1599.0" opacity="0.43">
+         <image>
+            <Image url="@../asset/DashBoard2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="514.0" layoutY="14.0" prefHeight="80.0" prefWidth="515.0" text=" PLACE  ORDER   FORM" textFill="#081080">
+         <font>
+            <Font name="Constantia Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="145.0" prefHeight="35.0" prefWidth="180.0" text=" Order ID : -" textFill="#0d0606">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="312.0" prefHeight="35.0" prefWidth="180.0" text=" Item ID : -" textFill="#0d0a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="598.0" layoutY="312.0" prefHeight="35.0" prefWidth="180.0" text=" Description : -" textFill="#0d0a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="975.0" layoutY="312.0" prefHeight="35.0" prefWidth="127.0" text=" Price : -" textFill="#0d0a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="688.0" layoutY="145.0" prefHeight="35.0" prefWidth="127.0" text=" Date : -" textFill="#0d0a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescription" layoutX="615.0" layoutY="345.0" onAction="#DescriptionOnAction" prefHeight="35.0" prefWidth="333.0" />
+      <TextField fx:id="txtPrice" layoutX="975.0" layoutY="345.0" onAction="#txtPriceOnAction" prefHeight="35.0" prefWidth="226.0" />
+      <TableView fx:id="tblOrderView" layoutX="15.0" layoutY="479.0" onSort="#OrderViewOnAction" prefHeight="506.0" prefWidth="1200.0">
+        <columns>
+          <TableColumn fx:id="clmItemId" prefWidth="146.0" text=" Item Id" />
+            <TableColumn fx:id="clmItemName" prefWidth="164.0" text=" Item Name" />
+            <TableColumn fx:id="clmDescription" prefWidth="239.0" text=" Description" />
+            <TableColumn fx:id="clmQty" prefWidth="139.0" text=" Qty" />
+            <TableColumn fx:id="clmPrice" prefWidth="168.0" text=" Price" />
+            <TableColumn fx:id="clmTotal" prefWidth="178.0" text=" Total" />
+            <TableColumn fx:id="clmAction" prefWidth="162.0" text=" Action" />
+        </columns>
+      </TableView>
+      <Label layoutX="1211.0" layoutY="312.0" prefHeight="35.0" prefWidth="189.0" text=" QTY on hand : -" textFill="#0d0a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQtyOnHand" layoutX="1222.0" layoutY="345.0" onAction="#txtQtyHandOnAction" prefHeight="35.0" prefWidth="166.0" />
+      <Button fx:id="btnAdd" layoutX="1324.0" layoutY="397.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="42.0" prefWidth="91.0" style="-fx-background-color: Teal;" text=" Add " textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRemove" layoutX="1466.0" layoutY="397.0" mnemonicParsing="false" onAction="#btnRemoveOnAction" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: red;" text=" Remove" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnPlacerOrder" layoutX="1434.0" layoutY="836.0" mnemonicParsing="false" onAction="#plaaceOrderOnAction" prefHeight="42.0" prefWidth="134.0" style="-fx-background-color: blue;" text=" Place Order" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="1222.0" layoutY="666.0" prefHeight="35.0" prefWidth="116.0" text=" Total    : -" textFill="#0d0a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="204.0" prefHeight="35.0" prefWidth="180.0" text=" Customer ID : -" textFill="#0d0606">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="249.0" layoutY="204.0" prefHeight="35.0" prefWidth="226.0" text=" Customer Name: -" textFill="#0d0a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCustNAme" layoutX="249.0" layoutY="239.0" onAction="#custNameOnAction" prefHeight="35.0" prefWidth="333.0" />
+      <Button fx:id="btnNew" layoutX="598.0" layoutY="236.0" mnemonicParsing="false" onAction="#btnNewOnAction" prefHeight="42.0" prefWidth="91.0" style="-fx-background-color: green;" text=" New" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblOrderId" layoutX="215.0" layoutY="145.0" onDragDetected="#lblOrderIdOnAction" prefHeight="35.0" prefWidth="318.0" text=" " textFill="#098a38">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label fx:id="lblDate" layoutX="815.0" layoutY="145.0" onDragDetected="#lblDateOnAction" prefHeight="35.0" prefWidth="348.0" text=" " textFill="#ee2d2d">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label fx:id="lblTotal" layoutX="1343.0" layoutY="666.0" onDragDetected="#lblTotalOnAction" prefHeight="35.0" prefWidth="246.0" text=" " textFill="#b92a4b">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <ComboBox fx:id="cmdItemId" layoutX="15.0" layoutY="345.0" onAction="#cmdItemOnAction" prefHeight="35.0" prefWidth="200.0" />
+      <ComboBox fx:id="cmdCustomerId" layoutX="15.0" layoutY="238.0" onAction="#cmdCustOnAction" prefHeight="35.0" prefWidth="200.0" />
+      <Label layoutX="249.0" layoutY="312.0" prefHeight="35.0" prefWidth="180.0" text=" Item Name: -" textFill="#0d0a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtItemName" layoutX="249.0" layoutY="345.0" prefHeight="35.0" prefWidth="333.0" />
+      <Label layoutX="1418.0" layoutY="312.0" prefHeight="35.0" prefWidth="108.0" text=" QTY : -" textFill="#0d0a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQty" layoutX="1418.0" layoutY="345.0" onAction="#txtQtyOnAction" prefHeight="35.0" prefWidth="166.0" />
+      <Label layoutX="1222.0" layoutY="721.0" prefHeight="35.0" prefWidth="127.0" text="Balance : -" textFill="#0d0a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBalance" layoutX="1343.0" layoutY="721.0" onDragDetected="#lblBalanceOnAction" prefHeight="35.0" prefWidth="246.0" text=" " textFill="#b92a4b">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="1219.0" layoutY="559.0" prefHeight="35.0" prefWidth="260.0" text="Customer Payment : -" textFill="#1e1e1d">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCustPayment" layoutX="1324.0" layoutY="594.0" onAction="#txtCustPaymentOnAction" prefHeight="31.0" prefWidth="246.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnPrint" layoutX="1264.0" layoutY="836.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="42.0" prefWidth="121.0" style="-fx-background-color: Cyan;" text=" Print" textFill="#030202">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="29.0">
+               <image>
+                  <Image url="@../asset/PrintIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

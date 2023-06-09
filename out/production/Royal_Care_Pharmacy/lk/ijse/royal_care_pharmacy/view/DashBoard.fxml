@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Pane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.royal_care_pharmacy.Controller.DashBoardController">
+   <children>
+      <AnchorPane fx:id="Pane2" layoutX="331.0" layoutY="-1.0" prefHeight="1000.0" prefWidth="1590.0" style="-fx-background-color: LightCyan;">
+         <children>
+            <AnchorPane depthTest="ENABLE" prefHeight="91.0" prefWidth="1590.0" style="-fx-background-color: #64DDBB;">
+               <children>
+                  <Text layoutX="1302.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Royal care ">
+                     <font>
+                        <Font name="System Bold Italic" size="28.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1353.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmacy">
+                     <font>
+                        <Font name="System Bold Italic" size="28.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="63.0" fitWidth="70.0" layoutX="1492.0" layoutY="14.0">
+                     <image>
+                        <Image url="@../asset/heartbeat.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="1000.0" prefWidth="322.0" style="-fx-background-color: CadetBlue;">
+         <children>
+            <Button fx:id="btnEmployee" layoutY="172.0" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="63.0" prefWidth="307.0" style="-fx-background-color: CadetBlue;" text="    Employee " textFill="#170505" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Constantia Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.05" light="$null" specularConstant="0.2" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="btnSalary" layoutY="248.0" mnemonicParsing="false" onAction="#btnSalaryOnAction" prefHeight="63.0" prefWidth="331.0" style="-fx-background-color: CadetBlue;" text=" Salary" textFill="#170505" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Constantia Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.05" light="$null" specularConstant="0.2" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="btnAttendence" layoutY="321.0" mnemonicParsing="false" onAction="#btnAttendenceOnAction" prefHeight="63.0" prefWidth="331.0" style="-fx-background-color: CadetBlue;" text="  Attendence" textFill="#170505">
+               <font>
+                  <Font name="Constantia Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.05" light="$null" specularConstant="0.2" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="btnItem" layoutY="397.0" mnemonicParsing="false" onAction="#btnItemOnAction" prefHeight="63.0" prefWidth="331.0" style="-fx-background-color: CadetBlue;" text=" Item" textFill="#170505">
+               <font>
+                  <Font name="Constantia Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.05" light="$null" specularConstant="0.2" specularExponent="0.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="btnOrder" layoutY="469.0" mnemonicParsing="false" onAction="#BtnOrderOnAction" prefHeight="63.0" prefWidth="331.0" style="-fx-background-color: CadetBlue;" text=" Order" textFill="#170505">
+               <font>
+                  <Font name="Constantia Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.05" light="$null" specularConstant="0.2" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="btnBactch" layoutX="1.0" layoutY="553.0" mnemonicParsing="false" onAction="#btnBatchOnAction" prefHeight="63.0" prefWidth="331.0" style="-fx-background-color: CadetBlue;" text=" Batch" textFill="#170505">
+               <font>
+                  <Font name="Constantia Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.05" light="$null" specularConstant="0.2" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <Button fx:id="btnSupplier" layoutY="633.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" prefHeight="63.0" prefWidth="331.0" style="-fx-background-color: CadetBlue;" text=" Supplier" textFill="#170505">
+               <font>
+                  <Font name="Constantia Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.05" light="$null" specularConstant="0.2" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="33.0" layoutY="187.0">
+               <image>
+                  <Image url="@../asset/employees.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="48.0" layoutX="18.0" layoutY="257.0">
+               <image>
+                  <Image url="@../asset/Salary.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="28.0" layoutY="336.0">
+               <image>
+                  <Image url="@../asset/calendar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="23.0" layoutY="412.0">
+               <image>
+                  <Image url="@../asset/Item.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="48.0" layoutX="9.0" layoutY="478.0">
+               <image>
+                  <Image url="@../asset/Order.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="38.0" layoutX="23.0" layoutY="562.0">
+               <image>
+                  <Image url="@../asset/Batch.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="48.0" layoutX="18.0" layoutY="642.0">
+               <image>
+                  <Image url="@../asset/Supplier.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnCustomer" layoutY="101.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="63.0" prefWidth="332.0" style="-fx-background-color: CadetBlue;" text=" Customer" textFill="#1b1010" AnchorPane.bottomAnchor="836.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="101.0">
+               <font>
+                  <Font name="Constantia Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="1.05" light="$null" specularConstant="0.2" specularExponent="0.0" surfaceScale="3.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Button>
+            <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="33.0" layoutY="116.0">
+               <image>
+                  <Image url="@../asset/Customer.png" />
+               </image>
+            </ImageView>
+            <AnchorPane prefHeight="91.0" prefWidth="331.0" style="-fx-background-color: #83D6DE;">
+               <children>
+                  <Text layoutX="98.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Menu">
+                     <font>
+                        <Font name="Garamond Bold" size="44.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="63.0" fitWidth="60.0" layoutX="21.0" layoutY="13.0">
+                     <image>
+                        <Image url="@../asset/more.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnBack" layoutX="66.0" layoutY="775.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="51.0" prefWidth="176.0" style="-fx-background-color: DarkCyan;" text=" Logout" textFill="#0d0c0c">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

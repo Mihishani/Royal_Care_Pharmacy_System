@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="EmployeeContext" prefHeight="1000.0" prefWidth="1599.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.royal_care_pharmacy.Controller.EmployeeFormController">
+   <children>
+      <ImageView fx:id="AchPaEmployeeForm" fitHeight="1000.0" fitWidth="1599.0" opacity="0.49">
+         <image>
+            <Image url="@../asset/MainForm.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="540.0" layoutY="14.0" prefHeight="80.0" prefWidth="414.0" text=" EMPLOYEE   FORM" textFill="#081080">
+         <font>
+            <Font name="Constantia Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="131.0" prefHeight="35.0" prefWidth="196.0" text=" Employee Id " textFill="#030303">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEId" layoutX="291.0" layoutY="131.0" onAction="#txtEidOnAction" onKeyReleased="#txtEmployeeIdOnReleased" prefHeight="35.0" prefWidth="766.0" />
+      <Label layoutX="15.0" layoutY="179.0" prefHeight="35.0" prefWidth="211.0" text=" Employee Name " textFill="#030303" AnchorPane.bottomAnchor="786.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="1373.0" AnchorPane.topAnchor="179.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEName" layoutX="291.0" layoutY="179.0" onKeyReleased="#txtEmployeeIdOnReleased" prefHeight="35.0" prefWidth="766.0" />
+      <Label layoutX="14.0" layoutY="227.0" prefHeight="35.0" prefWidth="222.0" text=" Employee Address" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEAddress" layoutX="291.0" layoutY="227.0" onKeyReleased="#txtEmployeeIdOnReleased" prefHeight="35.0" prefWidth="766.0" />
+      <Label layoutX="12.0" layoutY="271.0" prefHeight="35.0" prefWidth="211.0" text=" Employee Email " textFill="#030303">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEEmail" layoutX="291.0" layoutY="271.0" onKeyReleased="#txtEmployeeIdOnReleased" prefHeight="35.0" prefWidth="766.0" />
+      <Label layoutX="11.0" layoutY="315.0" prefHeight="35.0" prefWidth="222.0" text=" Employee TelNum " textFill="#030303">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtETelNum" layoutX="291.0" layoutY="315.0" onKeyReleased="#txtEmployeeIdOnReleased" prefHeight="35.0" prefWidth="766.0" />
+      <Label layoutX="12.0" layoutY="360.0" prefHeight="35.0" prefWidth="166.0" text=" User_Name " textFill="#030303">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="403.0" prefHeight="35.0" prefWidth="154.0" text=" Password " textFill="#030303">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="291.0" layoutY="360.0" onKeyReleased="#txtEmployeeIdOnReleased" prefHeight="35.0" prefWidth="766.0" />
+      <TextField fx:id="txtPassword" layoutX="291.0" layoutY="403.0" onKeyReleased="#txtEmployeeIdOnReleased" prefHeight="35.0" prefWidth="766.0" />
+      <Button fx:id="btnAddEmployee" layoutX="1188.0" layoutY="166.0" mnemonicParsing="false" onAction="#btnAddEmployeeOnAction" onKeyReleased="#txtEmployeeIdOnReleased" prefHeight="42.0" prefWidth="181.0" style="-fx-background-color: green;" text=" Add Employee" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdateEmployee" layoutX="1189.0" layoutY="227.0" mnemonicParsing="false" onAction="#btnEmployeeUpdateOnAction" prefHeight="42.0" prefWidth="181.0" style="-fx-background-color: Orange;" text=" Update Employee" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEmployeeDelete" layoutX="1189.0" layoutY="285.0" mnemonicParsing="false" onAction="#btnDeleteEmployeeOnAction" prefHeight="42.0" prefWidth="181.0" style="-fx-background-color: Red;" text=" Delete Employee" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblViewTable" layoutX="44.0" layoutY="466.0" prefHeight="514.0" prefWidth="1495.0">
+         <columns>
+            <TableColumn fx:id="clmEid" prefWidth="133.00003051757812" text=" Employee Id" />
+            <TableColumn fx:id="clmEname" prefWidth="222.0" text=" Employee Name" />
+            <TableColumn fx:id="clmEAddress" prefWidth="300.0" text=" Employee Address" />
+            <TableColumn fx:id="clmEEmail" prefWidth="267.0" text=" Employee Email" />
+            <TableColumn fx:id="clmETelNum" prefWidth="193.0" text=" Employee TelNumber" />
+            <TableColumn fx:id="clmUserName" prefWidth="206.0" text=" User_Name" />
+            <TableColumn fx:id="clmEPassword" prefWidth="175.0" text=" Password" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnLoad" layoutX="1189.0" layoutY="350.0" mnemonicParsing="false" onAction="#btnLoadOnAction" prefHeight="42.0" prefWidth="181.0" style="-fx-background-color: blue;" text=" Load All Details " textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="236.0" layoutY="131.0" prefHeight="35.0" prefWidth="42.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="179.0" prefHeight="35.0" prefWidth="42.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="227.0" prefHeight="35.0" prefWidth="42.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="268.0" prefHeight="35.0" prefWidth="42.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="315.0" prefHeight="35.0" prefWidth="42.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="360.0" prefHeight="35.0" prefWidth="42.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="403.0" prefHeight="35.0" prefWidth="42.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

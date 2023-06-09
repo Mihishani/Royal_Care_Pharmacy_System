@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2fe8375a-d91c-4975-9e8e-13800a3168cd">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[  SELECT * FROM royal_care_pharmacy.order_detail ]]>
+	</queryString>
+	<field name="OID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="OID"/>
+		<property name="com.jaspersoft.studio.field.label" value="OID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_detail"/>
+	</field>
+	<field name="ItemId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ItemId"/>
+		<property name="com.jaspersoft.studio.field.label" value="ItemId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_detail"/>
+	</field>
+	<field name="Price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="Price"/>
+		<property name="com.jaspersoft.studio.field.label" value="Price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_detail"/>
+	</field>
+	<field name="QTY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="QTY"/>
+		<property name="com.jaspersoft.studio.field.label" value="QTY"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_detail"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="93" splitType="Stretch">
+			<staticText>
+				<reportElement x="141" y="10" width="299" height="35" forecolor="#13A179" uuid="51371edd-dd7e-4fe3-a34e-19b0a640a092"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ROYAL  CARE   PHARMACY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="40" width="299" height="35" forecolor="#13A179" uuid="08d5e047-5ed2-40cc-9770-89f6f7b9ffac"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KALUTARA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="71" y="10" width="70" height="60" uuid="7a284f2b-42ac-4403-8ede-b24e0911ceee"/>
+				<imageExpression><![CDATA["D:/Java/Royal_Care_Pharmacy/src/lk/ijse/royal_care_pharmacy/asset/Logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="70" splitType="Stretch">
+			<textField pattern="HH:mm">
+				<reportElement x="420" y="30" width="100" height="30" uuid="5ddc20bc-4708-42ef-8ea8-246b7a2f215d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="300" y="30" width="100" height="30" uuid="525b0e27-92c4-4fd6-bd9e-f837c556a601"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="0" width="91" height="25" uuid="9b756576-eea8-49e5-98b3-735f3f8efe59"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[ NO : 03 /C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="20" width="91" height="25" uuid="5f1eb998-da39-4cd3-b4e1-5594578dcebf"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Kalutara South,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="40" width="91" height="25" uuid="3b210efc-b2f6-4904-a200-edc5a13de750"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Nagoda.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="-10" width="91" height="25" uuid="73ed5b63-6d70-42ab-b09b-99bc594decb8"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Tel :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="-10" width="90" height="20" uuid="fd35c92f-0edb-40ec-9b7c-eefbafab3841"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[0382235678]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="8" width="91" height="25" uuid="b101826e-ff64-41dd-a391-5eee46e8752e"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Mobile :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="8" width="90" height="20" uuid="94969a8e-5c2d-4834-824d-c5703f2966ac"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[0778946734]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="90" width="141" height="30" uuid="ef10dcea-0744-4620-b849-85a914a2d6e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="24a7976c-1b2f-410c-bdbb-a0388ca2828c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{OID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="90" width="138" height="30" uuid="962e710a-f13b-4b9c-9f14-c8184ae7a37f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a432b870-98c9-4af5-9e51-77a566cc6552"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ItemId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="90" width="138" height="30" uuid="506a188a-0927-4c06-89c3-84acd0c902a2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbc0ac6e-ba8f-4f86-9e54-b53bbdadc9fc"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="90" width="138" height="30" uuid="e0e19321-732a-40d7-ba03-d0e102e5e57b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3917a18d-97be-4f20-8db6-8c57e280d327"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{QTY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-10" y="39" width="141" height="30" uuid="7ca755ce-68c4-472c-a410-983d6d6b0d90">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="24a7976c-1b2f-410c-bdbb-a0388ca2828c"/>
+				</reportElement>
+				<text><![CDATA[OID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="39" width="138" height="30" uuid="e5ec0b0d-b2cb-4040-a641-cbc5f0e0897d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a432b870-98c9-4af5-9e51-77a566cc6552"/>
+				</reportElement>
+				<text><![CDATA[ItemId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="39" width="138" height="30" uuid="4907d4b4-bd6c-4e5a-9857-cb6e4d2bd7bb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dbc0ac6e-ba8f-4f86-9e54-b53bbdadc9fc"/>
+				</reportElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="39" width="138" height="30" uuid="b378e548-ab70-4085-9a56-d9032f5cae7d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3917a18d-97be-4f20-8db6-8c57e280d327"/>
+				</reportElement>
+				<text><![CDATA[QTY]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="13" width="260" height="30" forecolor="#B0201E" uuid="ac5d5807-718d-4c7d-960b-a9ff5dfb4ac5"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THANK YOU. COME AGAIN!]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

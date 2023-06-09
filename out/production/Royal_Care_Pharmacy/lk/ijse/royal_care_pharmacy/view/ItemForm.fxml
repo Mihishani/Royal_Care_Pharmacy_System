@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ItemFormContext" prefHeight="1000.0" prefWidth="1599.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.royal_care_pharmacy.Controller.ItemFormController">
+   <children>
+      <ImageView fitHeight="1000.0" fitWidth="1599.0" layoutX="-8.0" onKeyReleased="#txtItemOnReleased" opacity="0.33">
+         <image>
+            <Image url="@../asset/MainForm.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="654.0" layoutY="24.0" prefHeight="80.0" prefWidth="317.0" text=" ITEM   FORM" textFill="#081080">
+         <font>
+            <Font name="Constantia Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="158.0" prefHeight="40.0" prefWidth="194.0" text="Item Id" textFill="#0d0404">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="198.0" prefHeight="40.0" prefWidth="184.0" text="Item Name" textFill="#0d0404">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="238.0" prefHeight="40.0" prefWidth="194.0" text="Item Price" textFill="#0d0404">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="363.0" prefHeight="40.0" prefWidth="131.0" text="  QTY  " textFill="#0d0404">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtItemName" layoutX="480.0" layoutY="196.0" onAction="#ItemNameOnAction" onKeyReleased="#txtItemOnReleased" prefHeight="40.0" prefWidth="585.0" />
+      <TextField fx:id="txtItemId" layoutX="480.0" layoutY="155.0" onAction="#ItemIdOnAction" onKeyReleased="#txtItemOnReleased" prefHeight="40.0" prefWidth="585.0" />
+      <TextField fx:id="txtItemPrice" layoutX="480.0" layoutY="238.0" onAction="#ItemPriceOnAction" onKeyReleased="#txtItemOnReleased" prefHeight="40.0" prefWidth="585.0" />
+      <TextField fx:id="txtQty" layoutX="480.0" layoutY="363.0" onAction="#QtyOnAction" onKeyReleased="#txtItemOnReleased" prefHeight="40.0" prefWidth="585.0" />
+      <Button fx:id="btnAdd" layoutX="1167.0" layoutY="157.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="42.0" prefWidth="175.0" style="-fx-background-color: green;" text=" Add Item" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnItemUpdate" layoutX="1167.0" layoutY="217.0" mnemonicParsing="false" onAction="#btnItemUpdateOnAction" prefHeight="42.0" prefWidth="175.0" style="-fx-background-color: orange;" text=" Update Item" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnItemDelete" layoutX="1167.0" layoutY="279.0" mnemonicParsing="false" onAction="#ItemDeleteOnAction" prefHeight="42.0" prefWidth="175.0" style="-fx-background-color: Red;" text=" Delete Item" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblItemView" layoutX="32.0" layoutY="470.0" prefHeight="511.0" prefWidth="1533.0">
+         <columns>
+            <TableColumn fx:id="clmItemId" prefWidth="182.99996948242188" text=" Item Id" />
+            <TableColumn fx:id="clmItemName" prefWidth="252.0" text=" Item Name" />
+            <TableColumn fx:id="clmItemPrice" prefWidth="182.0" text="Qty" />
+            <TableColumn fx:id="clmItemMFD" prefWidth="207.0" text=" Item Price" />
+            <TableColumn fx:id="clmEPD" prefWidth="238.0" text=" Made Of Date" />
+            <TableColumn fx:id="clmQTY" prefWidth="224.0" text=" Expire Date" />
+            <TableColumn fx:id="clmDescription" prefWidth="246.0" text=" Description" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnItemViewLoad" layoutX="1167.0" layoutY="342.0" mnemonicParsing="false" onAction="#btnItemViewLoadOnAction" prefHeight="42.0" prefWidth="175.0" style="-fx-background-color: Blue;" text=" Item View Load" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="88.0" layoutY="321.0" prefHeight="40.0" prefWidth="194.0" text="  Expire Date  " textFill="#0d0404">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="278.0" prefHeight="40.0" prefWidth="210.0" text="  Made Of Date" textFill="#0d0404">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMAdeOfDay" layoutX="480.0" layoutY="278.0" onAction="#txtMadeOfDayOnAction" onKeyReleased="#txtItemOnReleased" prefHeight="40.0" prefWidth="585.0" />
+      <TextField fx:id="txtExpireDay" layoutX="480.0" layoutY="321.0" onAction="#txtExpireDayOnAction" onKeyReleased="#txtItemOnReleased" prefHeight="40.0" prefWidth="585.0" />
+      <Label layoutX="374.0" layoutY="158.0" prefHeight="40.0" prefWidth="63.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="196.0" prefHeight="40.0" prefWidth="63.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="238.0" prefHeight="40.0" prefWidth="63.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="278.0" prefHeight="40.0" prefWidth="63.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="321.0" prefHeight="40.0" prefWidth="63.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="363.0" prefHeight="40.0" prefWidth="63.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="410.0" prefHeight="40.0" prefWidth="201.0" text=" Description" textFill="#0d0404">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="410.0" prefHeight="40.0" prefWidth="63.0" text=" : -">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescription" layoutX="480.0" layoutY="410.0" onKeyReleased="#txtItemOnReleased" prefHeight="40.0" prefWidth="585.0" />
+   </children>
+</AnchorPane>
